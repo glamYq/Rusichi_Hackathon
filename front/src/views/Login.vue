@@ -3,7 +3,7 @@
       <img class="logo" src="@/assets/img/logo.png">
       <div class="white-box">
         <h1>Вход</h1>
-        <form @submit.prevent="login">
+        <form @submit.prevent="loginF">
         <!-- <label>Логин:</label> -->
         <input type="text" placeholder="Логин" required v-model="login">
         <!-- <label>Пароль:</label> -->
@@ -24,7 +24,7 @@
       }
     },
     methods:{
-      login: function(){
+      loginF: function(){
         let login = this.login
         let password = this.password
         $store.dispatch('login', {login,password}).then(() => this.$router.push('/main')).catch(err => console.log(err))
