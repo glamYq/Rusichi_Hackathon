@@ -5,6 +5,7 @@ import Profile from '../views/Profile.vue'
 import About from '../views/About.vue'
 import Contacts from '../views/Contacts.vue'
 import store from '@/store/store'
+import Legend from '../views/Legend.vue'
 
 const router = createRouter({
   routes: [
@@ -36,6 +37,13 @@ const router = createRouter({
     { 
       path: '/contacts', 
       component: Contacts,
+      meta: { 
+        requiresAuth: false
+      }
+    },
+    { 
+      path: '/legend', 
+      component: Legend,
       meta: { 
         requiresAuth: false
       }
