@@ -61,7 +61,10 @@ const store = createStore({
             reject(err)
           })
         })
-    }
+    },
+    saveLegendDebug({commit}, legend){
+      localStorage.setItem('enteredLegend', false)
+  }
   },
   getters : {
     isLoggedIn: state => !!state.token,
