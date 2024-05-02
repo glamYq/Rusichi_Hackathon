@@ -101,6 +101,10 @@ button{
  background-color: #1D443B;
  color: #fff;
 }
+button:hover{
+  background-color: #193a32;
+  scale: 1.05;
+}
 
 .logo {
  position: fixed;
