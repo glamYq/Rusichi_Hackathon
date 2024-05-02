@@ -1,6 +1,5 @@
 <template>
     <div>
-        
         <div class="container">
             <img class="logo" src="@/assets/img/logo.png">
             <router-link id="frame" to="/profile">Профиль</router-link>

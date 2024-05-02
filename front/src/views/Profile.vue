@@ -1,9 +1,8 @@
 <template>
-    <div>
-        <p>Profile</p>
-    </div>
+    <Header/>
 </template>
 <script>
+
 export default {
     
 }
