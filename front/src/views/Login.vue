@@ -25,8 +25,9 @@
     },
     methods:{
       login(){
-        let login = this.login;
+        let login = this.login
         let password = this.password
+        this.$store.dispatch('login', {login,password}).then(() => this.$router.push('/')).catch(err => console.log(err))
       }
     }
   }
