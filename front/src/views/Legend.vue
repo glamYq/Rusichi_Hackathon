@@ -27,7 +27,9 @@ import store from '@/store/store';
 export default {
   
   mounted() {
-  
+    // if(store.getters.enteredLegend){
+    //   this.$router.push('/main')
+    // }
   },
   
   data() {
@@ -46,6 +48,7 @@ export default {
     next(){
       this.counter+=1
       if(this.counter == 3){
+          store.dispatch('saveLegendDebug')
       }
     }
   },
