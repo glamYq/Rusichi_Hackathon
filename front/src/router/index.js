@@ -4,6 +4,7 @@ import Login from '../views/Login.vue'
 import Profile from '../views/Profile.vue'
 import About from '../views/About.vue'
 import Contacts from '../views/Contacts.vue'
+import store from '@/store/store'
 
 const router = createRouter({
   routes: [
@@ -15,22 +16,22 @@ const router = createRouter({
       path: '/main', 
       component: Main,
       meta: { 
-        requiresAuth: true
-      }
+       requiresAuth: true
+       }
     },
     { 
       path: '/about', 
       component: About,
-      meta: { 
-        requiresAuth: true
-      }
+       meta: { 
+         requiresAuth: true
+       }
     },
     { 
       path: '/profile', 
       component: Profile,
-      meta: { 
-        requiresAuth: true
-      }
+       meta: { 
+         requiresAuth: true
+       }
     },
     { 
       path: '/contacts', 
@@ -43,14 +44,15 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL)
 })
 router.beforeEach((to, from, next) => {
-  if(to.matched.some(record => record.meta.requiresAuth)) {
-    if (store.getters.isLoggedIn) {
-      next()
+  if(to.meta.requiresAuth){
+    if(!store.getters.isLoggedIn){
+      next('/login')
       return
     }
-    next('/login') 
-  } else {
-    next() 
+    next()
+    return
   }
+  next()
+  return
 })
 export default router

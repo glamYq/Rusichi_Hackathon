@@ -20,14 +20,14 @@
     data(){
       return{
         login: "",
-      password: ""
+        password: ""
       }
     },
     methods:{
-      login(){
+      login: function(){
         let login = this.login
         let password = this.password
-        this.$store.dispatch('login', {login,password}).then(() => this.$router.push('/')).catch(err => console.log(err))
+        $store.dispatch('login', {login,password}).then(() => this.$router.push('/')).catch(err => console.log(err))
       }
     }
   }
