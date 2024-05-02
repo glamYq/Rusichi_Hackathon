@@ -27,7 +27,7 @@
       login: function(){
         let login = this.login
         let password = this.password
-        $store.dispatch('login', {login,password}).then(() => this.$router.push('/')).catch(err => console.log(err))
+        $store.dispatch('login', {login,password}).then(() => this.$router.push('/main')).catch(err => console.log(err))
       }
     }
   }
