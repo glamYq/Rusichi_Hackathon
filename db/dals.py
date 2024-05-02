@@ -2,10 +2,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from db.models import User
 
-###########################################################
-# BLOCK FOR INTERACTION WITH DATABASE IN BUSINESS CONTEXT #
-###########################################################
 
+# BLOCK FOR INTERACTION WITH DATABASE 
 
 class UserDAL:
     """Data Access Layer for operating user info"""
