@@ -12,7 +12,7 @@ RUN apt-get -y update && \
     && rm -rf /var/lib/apt/lists/*
 
 COPY . .
-WORKDIR .
+# WORKDIR .
 
 # pip & requirements
 RUN python3 -m pip install --user --upgrade pip && \
