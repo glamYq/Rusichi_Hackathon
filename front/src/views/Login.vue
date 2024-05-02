@@ -1,18 +1,33 @@
 <template>
     <div class="background-img wrapper">
-      <form @submit.prevent="login">
+      <img src="@/assets/img/logo.png">
+      <div class="white-box">
+        <form @submit.prevent="login">
         <label>Логин:</label>
-        <input type="text" id="username">
+        <input type="text" required v-model="login">
         <label>Пароль:</label>
-        <input type="password" id="password">
+        <input type="password" required v-model="password">
         <button type="submit">Войти</button>
       </form>
+      </div>
+     
     </div>
   </template>
   
 <script>
   export default {
-    
+    data(){
+      return{
+        login: "",
+      password: ""
+      }
+    },
+    methods:{
+      login(){
+        let login = this.login;
+        let password = this.password
+      }
+    }
   }
 </script>
 
@@ -21,12 +36,19 @@
   background-image: url("@/assets/img/back.jpg");
   background-repeat: no-repeat;
   background-position: center center;
-  
+  background-size: cover;
 }
 .wrapper{
-  margin: 10px;
   height: 100vh;
-  text-align: center;
 }
-
+.white-box{
+    background-color: white;
+    margin: 10px;
+    text-align: center;
+    width: 600px;
+    height: 700px;
+}
+form{
+  margin: auto;
+}
 </style>
