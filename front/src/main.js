@@ -5,10 +5,11 @@ import store from '@/store/store'
 import components from '@/components'
 import Axios from 'axios'
 
-
 const app = createApp(App)
+
 app.use(router)
 app.use(store)
+
 app.config.globalProperties.$http = Axios;
 const token = localStorage.getItem('token')
 if (token) {

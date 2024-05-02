@@ -16,6 +16,7 @@
   </template>
   
 <script>
+import store from '@/store/store'
   export default {
     data(){
       return{
@@ -27,7 +28,7 @@
       loginF: function(){
         let login = this.login
         let password = this.password
-        $store.dispatch('login', {login,password}).then(() => this.$router.push('/main')).catch(err => console.log(err))
+        store.dispatch('login', {login,password}).then(() => this.$router.push('/main')).catch(err => console.log(err))
       }
     }
   }
