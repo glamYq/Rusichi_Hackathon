@@ -36,7 +36,6 @@ export default {
   },
   methods: {
     next(){
-      $http.
       this.counter+=1
       if(this.counter == 3){
 
