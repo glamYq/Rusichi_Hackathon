@@ -1,5 +1,8 @@
 <template>
-    <div class="background">
+    <header>
+        <img src="@/assets/img/logo.jpg" alt="">
+    </header>
+    <div>
         
     </div>
 </template>
@@ -9,7 +12,5 @@ export default {
 }
 </script>
 <style>
-    .background{
-        background-image: url();
-    }
+    
 </style>
