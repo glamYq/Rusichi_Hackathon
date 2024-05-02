@@ -4,14 +4,14 @@
     <div class="white-box">
       <form @submit.prevent="next" >
         <div v-if="counter == 0">
-          <input type="text" placeholder="Имя" required v-model="name">
-          <input type="number" placeholder="Возраст" required v-model="age">
+          <input type="text" placeholder="Имя" required v-model="legend.name">
+          <input type="number" placeholder="Возраст" required v-model="legend.age">
         </div>
         <div v-if="counter == 1">
-          <input type="text" placeholder="Достижения" required v-model="awards">
+          <input type="text" placeholder="Достижения" required v-model="legend.awards">
         </div>
         <div v-if="counter == 2">
-          <input type="text" placeholder="Награды" required v-model="achieve">
+          <input type="text" placeholder="Награды" required v-model="legend.achieve">
         </div>
       <button type="submit">Далее</button>
       </form>
@@ -25,15 +25,22 @@ export default {
   data() {
     return {
       counter: 0,
-      name: '',
-      age: 0,
-      awards: '',
-      achieve: ''
+      legend:{
+        name: '',
+        age: 0,
+        awards: '',
+        achieve: ''
+      }
+      
     }
   },
   methods: {
     next(){
+      $http.
       this.counter+=1
+      if(this.counter == 3){
+
+      }
     }
   },
 }

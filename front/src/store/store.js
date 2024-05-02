@@ -42,6 +42,9 @@ const store = createStore({
           reject(err)
         })
       })
+    },
+    saveLegend(){
+      
     }
   },
   getters : {
