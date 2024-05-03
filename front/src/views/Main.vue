@@ -12,6 +12,17 @@
                 <div class="achievements-info">Награды:</div>
             </div>
         </div>
+        <div class="group-container">
+            <div class="group-table">Группа</div>
+            <div class="group-info">
+                <div class="logo-content"><img class="logo" src="@/assets/img/eagle.png"></div>
+                <div class="collums">
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -32,13 +43,14 @@ export default {
 
     height: 300px;
     padding:10px;
+    margin-bottom: 20px;
     display: flex;
 }
 .white-box{
     background-color: white;
     border-radius: 10px;
     height: 280px;
-    width: 896px;
+    width: 890px;
     display: flex; /* Устанавливает flex контейнер для дочерних элементов */
     justify-content: left;
     
@@ -69,6 +81,53 @@ export default {
     margin-top:30px;
     margin-left: 60px;
     align-self: center;
-    width: 100%;
+    width: 90%;
 }
+
+
+.group-container{
+    background-color: red;
+    height: 600px;
+}
+.group-table{
+    height: 80px;
+    padding: 20px;
+    background-color: #fff;
+    font-weight: bold;
+}
+.group-info{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 930px; 
+    height: 235px; 
+    margin: 30px auto; /* Устанавливает margin слева и справа на auto */
+    display: flex;
+
+    position: relative;
+
+}
+.logo-content{
+    background: #000;
+    height: 100%;
+    width: 160px;
+}
+.logo{
+    position: absolute; /* Устанавливает абсолютное позиционирование для изображения */
+    top: 0; /* Располагает изображение в верхнем краю */
+    left: 0;
+    width: 120px;
+
+    margin: 10px;
+}
+.collums{
+    width: 100%;
+    display: flex;
+    background: #2f0;
+}
+.col{
+    flex:1;
+    background-color: aqua;
+    margin: 2px;
+}
+
 </style>

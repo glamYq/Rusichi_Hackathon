@@ -117,7 +117,7 @@ button:hover{
 }
 @media screen and (max-width: 1024px) {
  .white-box{
- position: absolute;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
