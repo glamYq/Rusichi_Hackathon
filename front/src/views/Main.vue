@@ -17,11 +17,28 @@
             <div class="group-info">
                 <div class="logo-content"><img class="logo" src="@/assets/img/eagle.png"></div>
                 <div class="collums">
-                    <div class="col"></div>
-                    <div class="col"></div>
-                    <div class="col"></div>
+                    <div class="col">
+                        <h2>Ястребы</h2>
+                        <h1>Рейтинг команды:</h1>
+                        <h1>Ваш рейтинг:</h1>
+                    </div>
+                    <div class="col">
+                        <h1>Разведчик:</h1>
+                        <h1>Спасатель:</h1>
+                        <h1>Защитник:</h1>
+                        <h1>Богатырь:</h1>
+                        <h1>Мероприятия:</h1>
+                    </div>
+                    <div class="col">
+                        <h1>Чистота:</h1>
+                        <h1>Поведение:</h1>
+                    </div>
                 </div>
             </div>
+            
+        </div>
+        <div class="all-group-rating">
+            
         </div>
     </div>
 </template>
@@ -86,7 +103,6 @@ export default {
 
 
 .group-container{
-    background-color: red;
     height: 600px;
 }
 .group-table{
@@ -99,7 +115,7 @@ export default {
     background-color: #fff;
     border-radius: 10px;
     width: 930px; 
-    height: 235px; 
+    height: 245px; 
     margin: 30px auto; /* Устанавливает margin слева и справа на auto */
     display: flex;
 
@@ -107,27 +123,34 @@ export default {
 
 }
 .logo-content{
-    background: #000;
     height: 100%;
     width: 160px;
+    margin-right: 10px;
 }
 .logo{
     position: absolute; /* Устанавливает абсолютное позиционирование для изображения */
     top: 0; /* Располагает изображение в верхнем краю */
     left: 0;
     width: 120px;
-
     margin: 10px;
 }
 .collums{
     width: 100%;
     display: flex;
-    background: #2f0;
+
 }
 .col{
     flex:1;
-    background-color: aqua;
-    margin: 2px;
+}
+h2{
+    font-size: 32px;
+    color: #79A0C1;
+}
+h1{
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 12px;
+    margin-top: 12px;
 }
 
 </style>
