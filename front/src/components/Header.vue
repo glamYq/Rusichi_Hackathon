@@ -5,7 +5,6 @@
             <router-link id="frame" to="/profile">Профиль</router-link>
             <router-link id="frame" to="/main">Общая статистика</router-link>
             <router-link id="frame" to="/about">О нас</router-link>
-            <router-link id="frame" to="/contacts">Контакты</router-link>
         </div>
     </div>
     
