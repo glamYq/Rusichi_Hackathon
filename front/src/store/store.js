@@ -36,6 +36,9 @@ const store = createStore({
       state.legend.age = payload.age
       state.legend.achieve = payload.achieve
       state.legend.awards = payload.awards
+    },
+    delete_enter(state){
+      state.hasEnteredLegend = false
     }
   },
   actions: {
@@ -86,7 +89,12 @@ const store = createStore({
     //debug
     saveLegendDebug({commit}, legend){
       localStorage.setItem('enteredLegend', true)
-      commit('save_legend', legend)
+      commit('set_legend', legend)
+    },
+    //debug
+    deleteLegendDebug(){
+      localStorage.removeItem('enteredLegend')
+      this.commit('delete_enter')
     },
     //debug
     loginDebug(){

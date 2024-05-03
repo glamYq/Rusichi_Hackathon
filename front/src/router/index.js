@@ -45,7 +45,6 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL)
 })
 router.beforeEach((to, from, next) => {
-
   //store.dispatch('logout')
   if(to.meta.requiresAuth){
     if(!store.getters.isLoggedIn){
@@ -56,5 +55,6 @@ router.beforeEach((to, from, next) => {
     return
   }
   next()
+  return
 })
 export default router
