@@ -26,10 +26,16 @@ import store from '@/store/store'
     },
     methods:{
       loginF: function(){
-        let login = this.login
-        let password = this.password
-        store.dispatch('login', {login,password}).then(() => this.$router.push('/main')).catch(err => console.log(err))
+        // let login = this.login
+        // let password = this.password
+        // store.dispatch('login', {login,password}).then(() => this.$router.push('/main')).catch(err => console.log(err))
+        store.dispatch('loginDebug').then(() => this.$router.push('/legend')).catch(err => console.log(err));
       }
+    },
+    mounted(){
+      if(store.getters.isLoggedIn){
+      this.$router.push('/main')
+    }
     }
   }
 </script>

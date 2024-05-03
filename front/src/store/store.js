@@ -6,24 +6,37 @@ const store = createStore({
     status: '',
     token: localStorage.getItem('token') || '',
     user : {},
-    hasEnteredLegend: localStorage.getItem('enteredLegend') || ''
+    hasEnteredLegend: localStorage.getItem('enteredLegend') || '',
+    legend: {
+      name: '',
+      age: 0,
+      awards: '',
+      achieve: '',
+      comand: ''
+    }
   },
   mutations: {
     auth_request(state){
     state.status = 'loading'
-  },
-  auth_success(state, token, user){
-    state.status = 'success'
-    state.token = token
-    state.user = user
-  },
-  auth_error(state){
-    state.status = 'error'
-  },
-  logout(state){
-    state.status = ''
-    state.token = ''
-  },
+    },
+    auth_success(state, token, user){
+      state.status = 'success'
+      state.token = token
+      state.user = user
+    },
+    auth_error(state){
+      state.status = 'error'
+    },
+    logout(state){
+      state.status = ''
+      state.token = ''
+    },
+    set_legend(state, payload){
+      state.legend.name = payload.name
+      state.legend.age = payload.age
+      state.legend.achieve = payload.achieve
+      state.legend.awards = payload.awards
+    }
   },
   actions: {
     login({commit}, user){
@@ -45,6 +58,14 @@ const store = createStore({
         })
       })
     },
+    logout({commit}){
+      return new Promise((resolve, reject) => {
+        commit('logout')
+        localStorage.removeItem('token')
+        delete axios.defaults.headers.common['Authorization']
+        resolve()
+      })
+     },
     saveLegend({commit}, legend){
         return new Promise((resolve, reject) => {
           commit('save_legend_request')
@@ -62,12 +83,19 @@ const store = createStore({
           })
         })
     },
+    //debug
     saveLegendDebug({commit}, legend){
-      localStorage.setItem('enteredLegend', false)
-  }
+      localStorage.setItem('enteredLegend', true)
+      commit('save_legend', legend)
+    },
+    //debug
+    loginDebug(){
+      localStorage.setItem('token', true)
+    },
   },
   getters : {
     isLoggedIn: state => !!state.token,
+    legend: state => state.legend,
     authStatus: state => state.status,
     enteredLegend: state => state.hasEnteredLegend
   }
