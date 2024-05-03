@@ -17,34 +17,36 @@ const router = createRouter({
       alias: '/', 
       component: Main,
       meta: { 
-       requiresAuth: false
+       requiresAuth: true
        }
     },
     { 
       path: '/about', 
       component: About,
        meta: { 
-         requiresAuth: false
+         requiresAuth: true
        }
     },
     { 
       path: '/profile', 
       component: Profile,
        meta: { 
-         requiresAuth: false
+         requiresAuth: true
        }
     },
     { 
       path: '/legend', 
       component: Legend,
       meta: { 
-        requiresAuth: false
+        requiresAuth: true
       }
     }
   ],
   history: createWebHistory(process.env.BASE_URL)
 })
 router.beforeEach((to, from, next) => {
+
+  //store.dispatch('logout')
   if(to.meta.requiresAuth){
     if(!store.getters.isLoggedIn){
       next('/login')
@@ -54,6 +56,5 @@ router.beforeEach((to, from, next) => {
     return
   }
   next()
-  return
 })
 export default router
