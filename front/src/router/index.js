@@ -14,7 +14,8 @@ const router = createRouter({
       component: Login
     },
     { 
-      path: '/main', 
+      path: '/main',
+      alias: '/', 
       component: Main,
       meta: { 
        requiresAuth: false
