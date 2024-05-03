@@ -35,10 +35,104 @@
                     </div>
                 </div>
             </div>
-            
+            <div class="group-info group-achivments">
+                <h1>Достижения группы</h1>
+            </div>
         </div>
+        
+        
+        <div class="group-table">Общая статистика</div>
         <div class="all-group-rating">
             
+            <div class="total-group-info eagle-group">
+                <div class="logo-content"><img class="logo" src="@/assets/img/eagle.png"></div>
+                <div class="collums">
+                    <div class="col">
+                        <h2>Ястребы</h2>
+                        <h1>Рейтинг команды:</h1>
+                        <h1>Ваш рейтинг:</h1>
+                    </div>
+                    <div class="col">
+                        <h1>Разведчик:</h1>
+                        <h1>Спасатель:</h1>
+                        <h1>Защитник:</h1>
+                        <h1>Богатырь:</h1>
+                        <h1>Мероприятия:</h1>
+                    </div>
+                    <div class="col">
+                        <h1>Чистота:</h1>
+                        <h1>Поведение:</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="total-group-info leopard-group">
+                <div class="logo-content"><img class="logo" src="@/assets/img/leopard.png"></div>
+                <div class="collums">
+                    <div class="col">
+                        <h2>Барсы</h2>
+                        <h1>Рейтинг команды:</h1>
+                        <h1>Ваш рейтинг:</h1>
+                    </div>
+                    <div class="col">
+                        <h1>Разведчик:</h1>
+                        <h1>Спасатель:</h1>
+                        <h1>Защитник:</h1>
+                        <h1>Богатырь:</h1>
+                        <h1>Мероприятия:</h1>
+                    </div>
+                    <div class="col">
+                        <h1>Чистота:</h1>
+                        <h1>Поведение:</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="total-group-info lynx-group">
+                <div class="logo-content"><img class="logo" src="@/assets/img/lynx.png"></div>
+                <div class="collums">
+                    <div class="col">
+                        <h2>Рыси</h2>
+                        <h1>Рейтинг команды:</h1>
+                        <h1>Ваш рейтинг:</h1>
+                    </div>
+                    <div class="col">
+                        <h1>Разведчик:</h1>
+                        <h1>Спасатель:</h1>
+                        <h1>Защитник:</h1>
+                        <h1>Богатырь:</h1>
+                        <h1>Мероприятия:</h1>
+                    </div>
+                    <div class="col">
+                        <h1>Чистота:</h1>
+                        <h1>Поведение:</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="total-group-info bear-group">
+                <div class="logo-content"><img class="logo" src="@/assets/img/bear.png"></div>
+                <div class="collums">
+                    <div class="col">
+                        <h2>Медведи</h2>
+                        <h1>Рейтинг команды:</h1>
+                        <h1>Ваш рейтинг:</h1>
+                    </div>
+                    <div class="col">
+                        <h1>Разведчик:</h1>
+                        <h1>Спасатель:</h1>
+                        <h1>Защитник:</h1>
+                        <h1>Богатырь:</h1>
+                        <h1>Мероприятия:</h1>
+                    </div>
+                    <div class="col">
+                        <h1>Чистота:</h1>
+                        <h1>Поведение:</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-container">
+            <div class="col"> <img src="@/assets/img/vk-icon.png"> </div>
+            <div class="col">Номер телефона: +7 (800) 222 - 82 52</div>
+            <div class="col">Адрес: Великий Новгород, Никольская, 16/5</div>
         </div>
     </div>
 </template>
@@ -122,6 +216,15 @@ export default {
     position: relative;
 
 }
+.group-achivments{
+    margin-top: -20px;
+    height: 200px;
+}
+.group-achivments h1{
+    font-weight: 700;
+    margin: 0 auto;
+
+}
 .logo-content{
     height: 100%;
     width: 160px;
@@ -152,5 +255,56 @@ h1{
     margin-top: 12px;
     margin-top: 12px;
 }
+.all-group-rating{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: white
 
+    
+}
+.total-group-info{
+    border-radius: 10px;
+    width: 900px; 
+    height: 245px; 
+    position: relative;
+    display: flex;
+    margin: 10px;
+}
+.eagle-group{
+    background: #79A0C1;
+}
+.eagle-group h2{
+    color: #fff;
+}
+.leopard-group{
+    background: #9D81BA;
+}
+.leopard-group h2{
+    color: #fff;
+}
+.lynx-group{
+    background: #B4917B;
+}
+.lynx-group h2{
+    color: #fff;
+}
+.bear-group{
+    background: #578764;
+}
+.bear-group h2{
+    color: #fff;
+}
+
+.bottom-container{
+    height: 140px;
+    background: #79A0C1;
+    display: flex;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 65px;
+    color:#fff
+}
+.bottom-container img{
+    height: 48px;
+}
 </style>
